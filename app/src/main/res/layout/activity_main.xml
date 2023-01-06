@@ -12,6 +12,7 @@
         android:orientation="vertical"
         android:padding="8dp"
         android:layout_alignParentBottom="true"
+        android:background="@color/black"
         android:id="@+id/buttons_Layout">
 
         <LinearLayout
