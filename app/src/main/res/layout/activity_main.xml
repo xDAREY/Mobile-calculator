@@ -8,10 +8,10 @@
 
 
     <TextView
-        android:id="@+id/textview"
+        android:id="@+id/SolvingView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@id/solview"
+        android:layout_above="@id/AnswerView"
         android:layout_marginStart="25dp"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="25dp"
@@ -22,11 +22,14 @@
         android:textSize="30dp" />
 
     <TextView
-        android:id="@+id/solview"
+        android:id="@+id/AnswerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@id/buttons_Layout"
-        android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         android:text="0"
         android:textAlignment="textEnd"
         android:textColor="#F90404"
