@@ -46,23 +46,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 
     void giveID(MaterialButton btn, int id){
@@ -72,6 +55,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
+        MaterialButton button = (MaterialButton) v;
+        String btnText = button.getText().toString();
+        SolvingView.setText(btnText);
 
     }
 }
