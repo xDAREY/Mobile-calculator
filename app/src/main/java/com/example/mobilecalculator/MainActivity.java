@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.google.android.material.button.MaterialButton;
+import org.mozilla.javascript.Context;
+import org.mozilla.javascript.Scriptable;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     TextView SolvingView, AnswerView;
@@ -70,9 +72,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         SolvingView.setText(inputToSolve);
 
+        String Result = fetchAnswer(inputToSolve);
+
+        if(!Result.equals("Null")){
+            AnswerView.setText(Result);
+        }
+
     }
 
     String fetchAnswer(String ans) {
-        return "Calculated";
+        try{
+            Context contxt = Context.enter();
+            contxt.setOptimizationLevel(-1);
+            Scriptable script = contxt.initSafeStandardObjects();
+            String Result = contxt.evaluateString(script,ans,"JavaScript",1,null).toString();
+            if(Result.endsWith(".0")){
+                Result = Result.replace(".0","");
+            }
+            return Result;
+        }catch (Exception e){
+            return "null";
+        }
     }
 }
