@@ -10,8 +10,8 @@ import com.google.android.material.button.MaterialButton;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     TextView SolvingView, AnswerView;
-    MaterialButton btn_0,btn_1,btn_2,btn_3,btn_4,btn_5,btn_6,btn_7,btn_8,btn_9;
-    MaterialButton btn_C,btn_opnBrac,btn_closeBrac,btn_Multiply,btn_Divide,btn_Add,btn_Minus,btn_Dot,btn_Equals;
+    MaterialButton btn_0, btn_1, btn_2, btn_3, btn_4, btn_5, btn_6, btn_7, btn_8, btn_9;
+    MaterialButton btn_C, btn_opnBrac, btn_closeBrac, btn_Multiply, btn_Divide, btn_Add, btn_Minus, btn_Dot, btn_Equals;
 
 
     @Override
@@ -43,12 +43,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         giveID(btn_9, R.id.btn_9);
 
 
-
-
-
     }
 
-    void giveID(MaterialButton btn, int id){
+    void giveID(MaterialButton btn, int id) {
         btn = findViewById(id);
         btn.setOnClickListener(this);
     }
@@ -75,15 +72,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-        String fetchAnswer(String ans){
-            return "Calculated";
-        }
-
-
-
-
-        inputToSolve = inputToSolve+inputText;
-        SolvingView.setText(inputToSolve);
-
+    String fetchAnswer(String ans) {
+        return "Calculated";
     }
 }
