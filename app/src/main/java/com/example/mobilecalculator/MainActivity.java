@@ -56,7 +56,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         MaterialButton button = (MaterialButton) v;
         String inputText = button.getText().toString();
-        SolvingView.setText(inputText);
         String inputToSolve = SolvingView.getText().toString();
 
         if (inputText.equals("C")) {
@@ -91,7 +90,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
             return Result;
         }catch (Exception e){
-            return "null";
+            return "";
         }
     }
 }

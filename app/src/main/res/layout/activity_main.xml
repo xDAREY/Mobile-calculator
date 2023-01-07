@@ -16,7 +16,6 @@
         android:layout_marginTop="25dp"
         android:layout_marginEnd="25dp"
         android:layout_marginBottom="25dp"
-        android:text="0"
         android:textAlignment="textEnd"
         android:textColor="#000000"
         android:textSize="30dp" />
