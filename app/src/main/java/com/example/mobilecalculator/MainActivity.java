@@ -94,3 +94,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 }
+//To get my calculations right & without writing lengthy codes, I had to add a library to my dependencies in the "Build.gradle.app" folder --
+//then i synchronized it with my project
